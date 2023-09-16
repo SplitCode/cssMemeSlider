@@ -19,18 +19,27 @@ body {
   border: 2px solid red;
 }
 
-.slider-radio {
+/* .slider-radio {
   display: none;
-}
+} */
 
 .slider-container {
+  /* display: flex;
+  transition: transform 0,5 ;
+  padding-bottom: 20px; */
+  border: 2px solid greenyellow;
+  overflow: hidden;
+}
+
+.image-container {
   display: flex;
-  transition: transform 0.5s;
-  padding-bottom: 20px;
+  transition: margin-left 0.5s;
 }
 
 .slider-slide {
   min-width: 100%;
+  /* width: 100px;
+  height: 100px; */
 }
 
 .slider-slide img {
@@ -41,22 +50,47 @@ body {
 
 .slider-caption-container {
   display: flex;
-  justify-content: center;
+  /* justify-content: center; */
   /* margin-top: 20px; */
-  width: 700px;
+  width: 100%;
   border: 2px solid pink;
 }
 
 .slider-caption {
-  /* display: none; */
-  /* padding: 10px 20px; */
-  /* background-color: rgba(0, 0, 0, 0.7); */
+  /* display: none;
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7); */
   color: #fff;
-  border-radius: 5px;
+  flex-grow: 1;
+  /* border-radius: 5px; */
 }
 
+.common-container {
+  display: flex;
+  justify-content: space-between;
+  border: 2px solid red;
+}
+
+.slider-nav {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  border: 2px solid blueviolet;
+}
+
+.slider-indicator {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+  cursor: pointer;
+  margin: 0 5px;
+}
+
+
 /* Устанавливаем переменную --index для каждой радио-кнопки */
-.slider-radio:nth-child(1):checked ~ .slider-container {
+/* .slider-radio:nth-child(1):checked ~ .slider-container {
   --index: 1;
 }
 
@@ -74,39 +108,46 @@ body {
 
 .slider-radio:checked ~ .slider-container .slider-slide {
   transform: translateX(calc(-100% * (var(--index) - 1)));
-}
+} */
 
-.slider-radio:checked ~ .slider-caption-container .slider-caption {
+/* .slider-radio:checked ~ .slider-caption-container .slider-caption {
   display: block;
+} */
+
+/* .slider-radio:checked ~ .slider-caption-container .slider-caption {
+  display: none;
 }
 
-.common-container {
-  display: flex;
-  justify-content: space-between;
-  border: 2px solid red;
-}
 
-.slider-nav {
-  display: flex;
-  justify-content: center;
-  /* margin-top: 20px; */
-  border: 2px solid blueviolet;
-}
 
-.slider-indicator {
-  display: inline-block;
-  width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%;
-  cursor: pointer;
-  margin: 0 5px;
-}
+
 
 /* Устанавливаем переменную --index для меток в .slider-nav */
-.slider-radio:nth-child(1):checked ~ .slider-nav label:nth-child(1),
+/* .slider-radio:nth-child(1):checked ~ .slider-nav label:nth-child(1),
 .slider-radio:nth-child(2):checked ~ .slider-nav label:nth-child(2),
 .slider-radio:nth-child(3):checked ~ .slider-nav label:nth-child(3),
 .slider-radio:nth-child(4):checked ~ .slider-nav label:nth-child(4) {
   background-color: #f0f0f0;
+} */
+/* .slider-radio:nth-child(1):checked ~ .slider-nav label[for="slide1"] {
+  --index: 1;
 }
+
+.slider-radio:nth-child(2):checked ~ .slider-nav label[for="slide2"] {
+  --index: 2;
+}
+
+.slider-radio:nth-child(3):checked ~ .slider-nav label[for="slide3"] {
+  --index: 3;
+}
+
+.slider-radio:nth-child(4):checked ~ .slider-nav label[for="slide4"] {
+  --index: 4;
+}
+
+.slider-radio:checked ~ .slider-caption-container .slide1-caption,
+.slider-radio:checked ~ .slider-caption-container .slide2-caption,
+.slider-radio:checked ~ .slider-caption-container .slide3-caption,
+.slider-radio:checked ~ .slider-caption-container .slide4-caption {
+  display: block;
+} */
