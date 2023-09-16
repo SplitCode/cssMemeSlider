@@ -4,41 +4,64 @@
   font-weight: 700;
 }
 
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   min-height: 100vh;
   margin: 0;
-  font-family: Arial, sans-serif;
-  background-color: #111144;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 1rem;
+  color: #fff;
+  background: #fff;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1024px;
+  background: #25282a;
 }
 
 .slider {
-  max-width: 800px;
-  margin: 0 auto;
-  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 30px;
+  gap: 20px;
+  /* max-width: 800px;
+  margin: 0 auto; */
+  /* overflow: hidden; */
   border: 2px solid red;
 }
 
-/* .slider-radio {
+.slider-radio {
   display: none;
-} */
+}
 
 .slider-container {
   /* display: flex;
   transition: transform 0,5 ;
   padding-bottom: 20px; */
-  border: 2px solid greenyellow;
+  max-width: 1000px;
   overflow: hidden;
+  background: #000;
+  border-radius: 1%;
+  border: 2px solid greenyellow;
 }
 
 .image-container {
   display: flex;
-  transition: transform 0.5s ease-in-out;
-  /* transition: margin-left 0.5s ease-in-out; */
+  width: 100%;
+  text-align: center;
+  /* transition: transform 0.5s ease-in-out; */
 }
 
 .slider-slide {
   min-width: 100%;
+  /* flex-shrink:0; */
   /* width: 100px;
   height: 100px; */
 }
@@ -49,45 +72,68 @@ body {
   margin: 0 auto;
 }
 
-.slider-caption-container {
-  display: flex;
-  /* justify-content: center; */
-  /* margin-top: 20px; */
-  width: 100%;
-  border: 2px solid pink;
-}
-
-.slider-caption {
-  /* display: none;
-  padding: 10px 20px;
-  background-color: rgba(0, 0, 0, 0.7); */
-  color: #fff;
-  flex-grow: 1;
-  /* border-radius: 5px; */
-}
-
 .common-container {
   display: flex;
   justify-content: space-between;
+  /* row-gap: 20px; */
   border: 2px solid red;
 }
 
+.slider-caption-container {
+  /* display: flex; */
+  /* justify-content: center; */
+  /* margin-top: 20px; */
+  width: 80%;
+  height: 70px;
+  border: 2px solid pink;
+}
+
 .slider-nav {
-  display: flex;
-  justify-content: center;
-  margin-top: 20px;
+  width: 20%;
+  text-align: right;
   border: 2px solid blueviolet;
 }
 
 .slider-indicator {
   display: inline-block;
-  width: 10px;
+  padding: 5px;
+  /* width: 10px;
   height: 10px;
   background-color: #fff;
-  border-radius: 50%;
+  border-radius: 50%; */
   cursor: pointer;
-  margin: 0 5px;
+  /* margin: 0 5px; */
 }
+
+.slider-nav span {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid #ab74df;
+  background-color: #ab74df;
+  cursor: pointer;
+  /* transition: 0.5s; */
+}
+
+label:hover span {
+  background-color: #fff;
+  border: 2px solid #fff;
+}
+
+.slider-radio:nth-child(1):checked ~ .common-container .slider-nav label[for="slide1"] span,
+.slider-radio:nth-child(2):checked ~ .common-container .slider-nav label[for="slide2"] span,
+.slider-radio:nth-child(3):checked ~ .common-container .slider-nav label[for="slide3"] span,
+.slider-radio:nth-child(4):checked ~ .common-container .slider-nav label[for="slide4"] span {
+  background-color: #25282a;
+  border-color: #ab74df;
+}
+
+
+
+
+
+
 
 
 /* Устанавливаем переменную --index для каждой радио-кнопки */
@@ -115,16 +161,6 @@ body {
   display: block;
 }
 
-
-/* .slider-radio:checked ~ .slider-caption-container .slider-caption {
-  display: block;
-} */
-
-/* .slider-radio:checked ~ .slider-caption-container .slider-caption {
-  display: none;
-}
-
-
 /* Устанавливаем переменную --index для меток в .slider-nav */
 .slider-radio:nth-child(1):checked ~ .slider-nav label:nth-child(1),
 .slider-radio:nth-child(2):checked ~ .slider-nav label:nth-child(2),
@@ -132,25 +168,5 @@ body {
 .slider-radio:nth-child(4):checked ~ .slider-nav label:nth-child(4) {
   background-color: #f0f0f0;
 }
-/* .slider-radio:nth-child(1):checked ~ .slider-nav label[for="slide1"] {
-  --index: 1;
-}
 
-.slider-radio:nth-child(2):checked ~ .slider-nav label[for="slide2"] {
-  --index: 2;
-}
 
-.slider-radio:nth-child(3):checked ~ .slider-nav label[for="slide3"] {
-  --index: 3;
-}
-
-.slider-radio:nth-child(4):checked ~ .slider-nav label[for="slide4"] {
-  --index: 4;
-}
-
-.slider-radio:checked ~ .slider-caption-container .slide1-caption,
-.slider-radio:checked ~ .slider-caption-container .slide2-caption,
-.slider-radio:checked ~ .slider-caption-container .slide3-caption,
-.slider-radio:checked ~ .slider-caption-container .slide4-caption {
-  display: block;
-} */
