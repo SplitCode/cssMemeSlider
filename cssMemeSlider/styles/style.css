@@ -50,13 +50,14 @@ body {
   background: #000;
   border-radius: 1%;
   border: 2px solid greenyellow;
+  /* transition: transform 0.5s ease-in-out; */
 }
 
 .image-container {
   display: flex;
   width: 100%;
   text-align: center;
-  /* transition: transform 0.5s ease-in-out; */
+  transition: transform 0.5s ease-in-out;
 }
 
 .slider-slide {
@@ -113,7 +114,7 @@ body {
   border: 2px solid #ab74df;
   background-color: #ab74df;
   cursor: pointer;
-  /* transition: 0.5s; */
+  transition: 0.5s;
 }
 
 label:hover span {
@@ -129,14 +130,6 @@ label:hover span {
   border-color: #ab74df;
 }
 
-
-
-
-
-
-
-
-/* Устанавливаем переменную --index для каждой радио-кнопки */
 .slider-radio:nth-child(1):checked ~ .slider-container {
   --index: 1;
 }
@@ -153,20 +146,20 @@ label:hover span {
   --index: 4;
 }
 
-.slider-radio:checked ~ .slider-container .slider-slide {
+.slider-radio:checked ~ .slider-container .image-container {
   transform: translateX(calc(-100% * (var(--index) - 1)));
 }
 
-.slider-radio:checked ~ .slider-caption-container .slider-caption {
+/* .slider-radio:checked ~ .slider-caption-container .slider-caption {
   display: block;
-}
+} */
 
-/* Устанавливаем переменную --index для меток в .slider-nav */
-.slider-radio:nth-child(1):checked ~ .slider-nav label:nth-child(1),
+
+/* .slider-radio:nth-child(1):checked ~ .slider-nav label:nth-child(1),
 .slider-radio:nth-child(2):checked ~ .slider-nav label:nth-child(2),
 .slider-radio:nth-child(3):checked ~ .slider-nav label:nth-child(3),
 .slider-radio:nth-child(4):checked ~ .slider-nav label:nth-child(4) {
   background-color: #f0f0f0;
-}
+} */
 
 
