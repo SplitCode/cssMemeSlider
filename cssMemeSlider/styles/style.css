@@ -24,6 +24,7 @@ body {
   max-width: 64rem;
   background: #25282a;
   margin-top: 5rem;
+  border-radius: 2%;
 }
 
 .slider {
@@ -39,7 +40,6 @@ body {
 }
 
 .slider-container {
-
   max-width: 62.5rem;
   overflow: hidden;
   background: #000;
