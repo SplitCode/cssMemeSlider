@@ -15,13 +15,13 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   color: #fff;
-  background: #fff;
+  background: #45a6b3;
 }
 
 .main-container {
   margin: 0 auto;
   width: 100%;
-  max-width: 1024px;
+  max-width: 64rem;
   background: #25282a;
   margin-top: 5rem;
 }
@@ -30,12 +30,8 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 30px;
-  gap: 20px;
-  /* max-width: 800px;
-  margin: 0 auto; */
-  /* overflow: hidden; */
-  /* border: 2px solid red; */
+  padding: 2rem;
+  gap: 1.5rem;
 }
 
 .slider-radio {
@@ -43,15 +39,11 @@ body {
 }
 
 .slider-container {
-  /* display: flex;
-  transition: transform 0,5 ;
-  padding-bottom: 20px; */
-  max-width: 1000px;
+
+  max-width: 62.5rem;
   overflow: hidden;
   background: #000;
   border-radius: 1%;
-  /* border: 2px solid blueviolet; */
-  /* transition: transform 0.5s ease-in-out; */
 }
 
 .image-container {
@@ -62,12 +54,9 @@ body {
 }
 
 .slider-slide {
-  width: 1500px;
-  height: 500px;
+  width: 94rem;
+  height: 32rem;
   min-width: 100%;
-  /* flex-shrink:0; */
-  /* width: 100px;
-  height: 100px; */
 }
 
 .slider-slide img {
@@ -79,17 +68,11 @@ body {
 .common-container {
   display: flex;
   justify-content: space-between;
-  /* row-gap: 20px; */
-  /* border: 2px solid red; */
 }
 
 .slider-caption-container {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* margin-top: 20px; */
   width: 80%;
-  height: 70px;
-  /* border: 2px solid pink; */
+  height: 4.5rem;
 }
 
 .slider-caption {
@@ -102,26 +85,20 @@ body {
 .slider-nav {
   width: 20%;
   text-align: right;
-  /* border: 2px solid blueviolet; */
 }
 
 .slider-indicator {
   display: inline-block;
-  padding: 5px;
-  /* width: 10px;
-  height: 10px;
-  background-color: #fff;
-  border-radius: 50%; */
+  padding: 0.5rem;
   cursor: pointer;
-  /* margin: 0 5px; */
 }
 
 .slider-nav span {
   display: inline-block;
-  width: 16px;
-  height: 16px;
+  width: 1rem;
+  height: 1rem;
   border-radius: 50%;
-  border: 2px solid #45a6b3;;
+  border: 0.15rem solid #45a6b3;;
   background-color: #45a6b3;;
   cursor: pointer;
   transition: 0.5s;
@@ -129,7 +106,7 @@ body {
 
 label:hover span {
   background-color: #fff;
-  border: 2px solid #fff;
+  border: 0.15rem solid #fff;
 }
 
 .slider-radio:nth-child(1):checked ~ .common-container .slider-caption-container .slide1-caption,
