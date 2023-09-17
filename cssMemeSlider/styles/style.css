@@ -23,6 +23,7 @@ body {
   width: 100%;
   max-width: 1024px;
   background: #25282a;
+  margin-top: 5rem;
 }
 
 .slider {
@@ -167,4 +168,10 @@ label:hover span {
   border-color: #45a6b3;
 }
 
-
+.slider-radio:nth-child(1):checked ~ .common-container .slider-nav label[for="slide1"]:hover span,
+.slider-radio:nth-child(2):checked ~ .common-container .slider-nav label[for="slide2"]:hover span,
+.slider-radio:nth-child(3):checked ~ .common-container .slider-nav label[for="slide3"]:hover span,
+.slider-radio:nth-child(4):checked ~ .common-container .slider-nav label[for="slide4"]:hover span {
+  background-color: #25282a;
+  border-color: #fff;
+}
