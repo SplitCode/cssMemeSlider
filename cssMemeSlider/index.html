@@ -3,9 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>cssMemeSlider</title>
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/mq.css">
+    <link rel="icon" href="./assets/img/favicon.ico">
+    <title>CSS Meme Slider</title>
+
 </head>
+
 <body>
-    
+  <div class="main-container">
+  <div class="slider">
+      <input type="radio" name="slider" class="slider-radio" id="slide1" checked>
+      <input type="radio" name="slider" class="slider-radio" id="slide2">
+      <input type="radio" name="slider" class="slider-radio" id="slide3">
+      <input type="radio" name="slider" class="slider-radio" id="slide4">
+
+      <div class="slider-container">
+        <div class="image-container">
+          <div class="slider-slide" id="slide1-slide">
+              <img src="./assets/img/slide_1.jpg" alt="Slide_1">
+          </div>
+
+          <div class="slider-slide" id="slide2-slide">
+              <img src="./assets/img/slide_2.jpeg" alt="Slide_2">
+          </div>
+
+          <div class="slider-slide" id="slide3-slide">
+            <img src="./assets/img/slide_3.jpeg" alt="Slide_3">
+          </div>
+
+          <div class="slider-slide" id="slide4-slide">
+            <img src="./assets/img/slide_4.jpeg" alt="Slide_4">
+          </div>
+        </div>
+      </div>
+
+      <div class="common-container">
+      <div class="slider-caption-container">
+          <span class="slider-caption slide1-caption">Когда твой код запустился с первого раза &#128527;</span>
+          <span class="slider-caption slide2-caption">Но ведь работает...</span>
+          <span class="slider-caption slide3-caption">.pizza { display: flex; justify-content: end; } </span>
+          <span class="slider-caption slide4-caption">Когда не разобрался с CSS &#128566;</span>
+      </div>
+
+      <div class="slider-nav">
+          <label for="slide1" class="slider-indicator"><span></span></label>
+          <label for="slide2" class="slider-indicator"><span></span></label>
+          <label for="slide3" class="slider-indicator"><span></span></label>
+          <label for="slide4" class="slider-indicator"><span></span></label>
+      </div>
+
+    </div>
+
+  </div>
+</div>
 </body>
 </html>
+
+

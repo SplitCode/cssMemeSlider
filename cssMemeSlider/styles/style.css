@@ -1,0 +1,154 @@
+@font-face {
+  font-family: 'Montserrat';
+  src: url('./assets/fonts/Montserrat-Bold.ttf');
+  font-weight: 700;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  font-family: Montserrat, sans-serif;
+  font-weight: 700;
+  font-size: 1.5rem;
+  color: #fff;
+  background: #45a6b3;
+}
+
+.main-container {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 64rem;
+  background: #25282a;
+  margin-top: 5rem;
+  border-radius: 2%;
+}
+
+.slider {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 2rem;
+  gap: 1.5rem;
+}
+
+.slider-radio {
+  display: none;
+}
+
+.slider-container {
+  max-width: 62.5rem;
+  overflow: hidden;
+  background: #000;
+  border-radius: 1%;
+}
+
+.image-container {
+  display: flex;
+  width: 100%;
+  text-align: center;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slider-slide {
+  width: 94rem;
+  height: 32rem;
+  min-width: 100%;
+}
+
+.slider-slide img {
+  max-width: 100%;
+  height: 100%;
+  margin: 0 auto;
+}
+
+.common-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.slider-caption-container {
+  width: 80%;
+  height: 4.5rem;
+}
+
+.slider-caption {
+  display: block;
+  height: 0;
+  opacity: 0;
+  visibility: hidden;
+}
+
+.slider-nav {
+  width: 20%;
+  text-align: right;
+}
+
+.slider-indicator {
+  display: inline-block;
+  padding: 0.5rem;
+  cursor: pointer;
+}
+
+.slider-nav span {
+  display: inline-block;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 50%;
+  border: 0.15rem solid #45a6b3;;
+  background-color: #45a6b3;;
+  cursor: pointer;
+  transition: 0.5s;
+}
+
+label:hover span {
+  background-color: #fff;
+  border: 0.15rem solid #fff;
+}
+
+.slider-radio:nth-child(1):checked ~ .common-container .slider-caption-container .slide1-caption,
+.slider-radio:nth-child(2):checked ~ .common-container .slider-caption-container .slide2-caption,
+.slider-radio:nth-child(3):checked ~ .common-container .slider-caption-container .slide3-caption,
+.slider-radio:nth-child(4):checked ~ .common-container .slider-caption-container .slide4-caption {
+  opacity: 1;
+  visibility: visible;
+}
+
+.slider-radio:nth-child(1):checked ~ .slider-container {
+  --index: 1;
+}
+
+.slider-radio:nth-child(2):checked ~ .slider-container {
+  --index: 2;
+}
+
+.slider-radio:nth-child(3):checked ~ .slider-container {
+  --index: 3;
+}
+
+.slider-radio:nth-child(4):checked ~ .slider-container {
+  --index: 4;
+}
+
+.slider-radio:checked ~ .slider-container .image-container {
+  transform: translateX(calc(-100% * (var(--index) - 1)));
+}
+
+.slider-radio:nth-child(1):checked ~ .common-container .slider-nav label[for="slide1"] span,
+.slider-radio:nth-child(2):checked ~ .common-container .slider-nav label[for="slide2"] span,
+.slider-radio:nth-child(3):checked ~ .common-container .slider-nav label[for="slide3"] span,
+.slider-radio:nth-child(4):checked ~ .common-container .slider-nav label[for="slide4"] span {
+  background-color: #25282a;
+  border-color: #45a6b3;
+}
+
+.slider-radio:nth-child(1):checked ~ .common-container .slider-nav label[for="slide1"]:hover span,
+.slider-radio:nth-child(2):checked ~ .common-container .slider-nav label[for="slide2"]:hover span,
+.slider-radio:nth-child(3):checked ~ .common-container .slider-nav label[for="slide3"]:hover span,
+.slider-radio:nth-child(4):checked ~ .common-container .slider-nav label[for="slide4"]:hover span {
+  background-color: #25282a;
+  border-color: #fff;
+}
